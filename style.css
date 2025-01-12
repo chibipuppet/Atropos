@@ -61,6 +61,14 @@ span {
   flex-direction: column;
 }
 
+.tabel-teks {
+  width: 95%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .loading-bar {
   width: 100%;
   height: auto;
@@ -101,5 +109,100 @@ span {
 #lastupdate {
   font-size: 12px;
   color: #666
+}
+
+.container {
+  /* tambahkan stylenya */
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 8rem auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 0.5rem;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  cursor: pointer;
+  aria-label: "Navigasi slider";
+  transition: background-color 0.5s ease;
+  box-sizing: border-box;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.slider-nav a.active {
+  background-color: #fff;
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
 
