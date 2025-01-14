@@ -32,7 +32,7 @@ function updateProgress(percent, index) {
 }
 
 updateProgress(100, 1);
-updateProgress(8, 2);
+updateProgress(15, 2);
 updateProgress(8, 3);
 updateProgress(6, 4);
 
