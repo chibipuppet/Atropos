@@ -32,8 +32,8 @@ function updateProgress(percent, index) {
 }
 
 updateProgress(100, 1);
-updateProgress(15, 2);
-updateProgress(8, 3);
+updateProgress(31, 2);
+updateProgress(24, 3);
 updateProgress(6, 4);
 
 const slider = document.querySelector('.slider');
